@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
+<title>SKYFORGE — Build Your First Drone This Weekend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sky" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<div class="clouds" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="hudgrid" aria-hidden="true"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="sweep" aria-hidden="true"></div>
+<div class="corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a class="logo" href="#top"><span class="rotor"><i></i><i></i></span>SKYFORGE</a>
+    <nav class="nav-links">
+      <a href="#kit">The Kit</a>
+      <a href="#build">Build</a>
+      <a href="#specs">Specs</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="#build">Build guide</a>
+      <a class="btn btn-primary" href="#pricing">Order kit →</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container">
+    <span class="badge"><span class="pulse"></span>KIT V3 — NOW SHIPPING WORLDWIDE</span>
+    <h1>Build your first drone.<br><span class="grad">This weekend.</span></h1>
+    <p class="lede">42 pre-tested parts, one printed wiring map, and a guided Betaflight setup. No engineering degree — just a screwdriver, a soldering iron and a Saturday.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary big" href="#pricing">Order your kit</a>
+      <a class="btn btn-ghost big" href="#kit">See what's inside ↓</a>
+    </div>
+    <div class="tele">
+      <div class="t"><span>ALT</span><b id="tAlt">120 m</b></div>
+      <div class="t"><span>SPD</span><b id="tSpd">14 m/s</b></div>
+      <div class="t"><span>BAT</span><b id="tBat">22.4 V</b></div>
+      <div class="t"><span>GPS</span><b>12 SATS</b></div>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><b class="num" data-target="42" data-suffix="">0</b><span>parts in the box</span></div>
+      <div class="hs"><b class="num" data-target="6" data-suffix=" hr">0</b><span>average build time</span></div>
+      <div class="hs"><b class="num" data-target="9.4" data-decimals="1" data-suffix="k">0</b><span>builders worldwide</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <ul>
+    <li>CARBON FRAME ✦ 2306 MOTORS ✦ 55A ESC ✦ F7 FLIGHT CONTROLLER ✦ ELRS 2.4GHZ ✦ 800MW VTX ✦ 5140 PROPS ✦</li>
+    <li>CARBON FRAME ✦ 2306 MOTORS ✦ 55A ESC ✦ F7 FLIGHT CONTROLLER ✦ ELRS 2.4GHZ ✦ 800MW VTX ✦ 5140 PROPS ✦</li>
+  </ul>
+</div>
+
+<main class="below">
+
+<section class="block" id="kit">
+  <div class="container">
+    <div class="eyebrow">The Kit</div>
+    <h2>Everything airside,<br><span class="grad">nothing missing.</span></h2>
+    <div class="kit-grid">
+      <div class="kit glass"><span class="ico">🧩</span><h3>Carbon frame</h3><p>5″ true-X, 5 mm arms, pre-deburred. One spare arm in every box.</p></div>
+      <div class="kit glass"><span class="ico">🌀</span><h3>2306 motors ×4</h3><p>1750 KV for 6S, pre-tinned leads, direction-tested before packing.</p></div>
+      <div class="kit glass"><span class="ico">⚡</span><h3>55A 4-in-1 ESC</h3><p>BLHeli_32, 128 kHz PWM, smoke-stop protected power stage.</p></div>
+      <div class="kit glass"><span class="ico">🧠</span><h3>F7 flight controller</h3><p>7 UARTs, baro + gyro isolated in foam. Labels printed on the board.</p></div>
+      <div class="kit glass"><span class="ico">📡</span><h3>ELRS 2.4 GHz RX</h3><p>Onboard, antenna pre-tuned. 500 Hz link out of the box.</p></div>
+      <div class="kit glass"><span class="ico">🎥</span><h3>VTX + camera</h3><p>800 mW analog stack with pit mode — see what you build.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="build">
+  <div class="container">
+    <div class="eyebrow">Build</div>
+    <h2>Four steps to <span class="grad">first hover.</span></h2>
+    <div class="steps">
+      <div class="step glass"><b>01</b><h3>Snap the frame</h3><p>Arms, plates, standoffs. ~1 hr, one hex driver.</p></div>
+      <div class="step glass"><b>02</b><h3>Solder the stack</h3><p>Follow the printed map pad-by-pad. ~2 hr, flux included.</p></div>
+      <div class="step glass"><b>03</b><h3>Flash & configure</h3><p>Scan the QR card, paste our Betaflight diff, bind ELRS.</p></div>
+      <div class="step glass"><b>04</b><h3>First flight</h3><p>Checklist in the box. Then the sky is your syllabus.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="specs">
+  <div class="container split">
+    <div>
+      <div class="eyebrow">Specs</div>
+      <h2>Engineered to be<br><span class="grad">rebuilt by you.</span></h2>
+      <ul class="checks">
+        <li>Every pad labelled on the PCB — no datasheet diving</li>
+        <li>Motor leads pre-tinned, harness pre-crimped</li>
+        <li>Betaflight diff on a QR card, version-matched to the kit</li>
+        <li>Crash-spare arm + screw kit included, because gravity</li>
+      </ul>
+    </div>
+    <div class="hudcard glass">
+      <div class="hud-bar"><i></i><i></i><i></i><span>skyforge — config</span></div>
+      <pre><code><span class="c">&gt;</span> motor_pwm_protocol   DSHOT600
+<span class="c">&gt;</span> vtx_power            800 mW · pit on arm
+<span class="c">&gt;</span> rx_protocol          ELRS 2.4 GHz · 500 Hz
+<span class="c">&gt;</span> gps                  BN-220 <span class="ok">✓ 12 sats</span>
+<span class="c">&gt;</span> failsafe             GPS_RESCUE <span class="ok">✓ validated</span>
+<span class="c">&gt;</span> auw                  682 g (no battery)
+<span class="ok">✔</span> pre-flight complete — clear to arm <span class="cursor"></span></code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <blockquote>“I'd never held a soldering iron. <span class="it">Sunday evening I was hovering in the park.</span>”</blockquote>
+    <cite><b>Maya R.</b> · kit #0412, Berlin</cite>
+  </div>
+</section>
+
+<section class="block" id="pricing">
+  <div class="container">
+    <div class="eyebrow">Pricing</div>
+    <h2>Pick your <span class="grad">launch pad.</span></h2>
+    <div class="plan-grid">
+      <div class="plan glass">
+        <h3>Starter</h3><b>€289</b><span>airside complete</span>
+        <ul><li>All 42 flight parts</li><li>Printed wiring map</li><li>Betaflight QR diff card</li></ul>
+        <a class="btn btn-ghost" href="#">Start building</a>
+      </div>
+      <div class="plan glass hot">
+        <em class="ptag">MOST BUILT</em>
+        <h3>Builder Pro</h3><b>€449</b><span>fly-out-of-the-box</span>
+        <ul><li>Everything in Starter</li><li>Radio controller + charger</li><li>Goggle-ready VTX preset</li></ul>
+        <a class="btn btn-primary" href="#">Get Builder Pro →</a>
+      </div>
+      <div class="plan glass">
+        <h3>Club Pack</h3><b>€699</b><span>two builders</span>
+        <ul><li>2 full kits + shared spares</li><li>Team bench mat + tools</li><li>Group build-night support</li></ul>
+        <a class="btn btn-ghost" href="#">Build together</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-card glass">
+    <h2>The sky needs <span class="grad">builders.</span></h2>
+    <p>Kits ship in 48 h. The soldering iron is the only thing we can't include.</p>
+    <div class="hero-cta center">
+      <a class="btn btn-primary big" href="#pricing">Order kit V3 →</a>
+      <a class="btn btn-ghost big" href="#">Join the Discord</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container foot-in">
+    <span>© <span id="y">2026</span> SKYFORGE Labs — fly safe, fly legal</span>
+    <span class="legal"><a href="#">Docs</a><a href="#">Safety</a><a href="#">Regulations</a><a href="#">Contact</a></span>
+  </div>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
